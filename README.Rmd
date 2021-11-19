@@ -1,0 +1,67 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# req
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+## Overview
+
+Req's objective is to paint a comprehensive and historical picture of the Québec economy. The package provides insight into past and current trends 
+
+of the businesses created in Quebec by constructing a geographical representation of where and when each business exists (or existed), 
+
+as well as details about the business (i.e., what industry the business is in, how many employees it has, etc.)
+
+## Installation
+
+You can install the development version of req like so:
+#### J'aurai peut-être besoin de conseils sur ce qu'il faut mettre là... ####
+
+``` r
+# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```
+
+## How-To
+
+### Step 1: Getting the business's industry code
+
+A user needs to first know the corresponding industry code of a certain business
+
+```{r, eval = FALSE}
+Req_industry() # A list of all industries and their respective codes (from the Registraire des Entrprises) will be produced
+
+Req_industry(industry="Boulangeries et pâtisseries") # A list of all businesses in the boulangerie et pâtisserie industry and their respective codes (from the Registraire des Entrprises) will be produced
+
+Req_industry("Boulangeries et pâtisseries") # A list of all businesses in the boulangerie et pâtisserie industry and their respective codes (from the Registraire des Entrprises) will be produced
+
+Req_industry("Boula") # A list of all businesses in an industry that contains the string "Boula" and their respective codes (from the Registraire des Entrprises) will be produced
+```
+
+### Step 2: Getting the business's number of employees code
+
+Next, a user needs to know the possible ranges of the number of employees and their corresponding codes
+
+```{r, eval = FALSE}
+Req_employee() # A list of all possible ranges of number of employees and their respective codes (from the Registraire des Entrprises) will be produced
+```
+
+
+### Step 3: 
+
+
+
+
