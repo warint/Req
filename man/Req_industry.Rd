@@ -15,3 +15,6 @@ The corresponding industry code
 \description{
 This function provides an industry code to the corresponding inputted industry number
 }
+\examples{
+Req_industry(industry="Boulangeries et pâtisseries")
+}

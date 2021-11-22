@@ -1,11 +1,15 @@
-Package: req
+Package: Req
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Registrar of companies of Quebec
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R: 
+    person(given = "Thierry",
+           family = "Warin",
+           role = c("aut", "cre"),
+           email = "thierry.warin@hec.ca",
+           comment = c(ORCID = "0000-0002-5921-3428"))
+Description: The Registrar shall keep a public register in which shall be filed and published the information prescribed by law relating to associations and enterprises incorporated or registered in Quebec or carrying on activities there.
+Imports: dplyr, lubridate, httr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

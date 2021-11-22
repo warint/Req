@@ -13,10 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# req
+# Req
 
-<!-- badges: start -->
-<!-- badges: end -->
 
 ## Overview
 
@@ -28,11 +26,17 @@ as well as details about the business (i.e., what industry the business is in, h
 
 ## Installation
 
-You can install the development version of req like so:
-#### J'aurai peut-être besoin de conseils sur ce qu'il faut mettre là... ####
+You can install the latest development version of 'Req' with remotes as follows:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```{r, eval = FALSE}
+install.packages("remotes")
+remotes::install_github("warint/Req")
+```
+
+Then, test your installation with: 
+
+```{r,echo=FALSE}
+library(Req)
 ```
 
 ## How-To
@@ -60,8 +64,11 @@ Req_employee() # A list of all possible ranges of number of employees and their 
 ```
 
 
-### Step 3: 
+### Step 3: Getting the data
 
+Once the user knows all the arguments, s.he can collect the data in a very easy way through this function:
 
-
-
+```{r, eval=FALSE}
+Req_data(industry = 6013  , active = 1, num_employee = "B", creation_date = "2000-01-01" )  # It generates a dataframe with all companies operating in the industry 6013 (Bakeries and pastry shops), which are active, have a number of employees B (between 6 and 10) and were created on or after 2020-01-01.
+Req_data() # It generates a data frame of the complete dataset
+```

@@ -13,8 +13,6 @@ csv_file <- file.path(paste0(tempdir(), "/temp.csv"))
 req_data <- read.csv(csv_file)
 
 ## Load libraries
-library(roxygen2)
-library(readr)
 library(dplyr)
 library(lubridate)
 
@@ -27,7 +25,7 @@ req_date_creation <- base::unique(req_data$DAT_INIT_NOM_ASSUJ)
 #' data_inputs
 #'
 #' @description This function takes the data inputs of industry, an active dummy , the number of employees, and the creation date and returns the corresponding businesses
-#' @description If any/all inputs are left blank, all possible observations are called
+#' If any/all inputs are left blank, all possible observations are called
 #'
 #' @param industry The type of industry a business is classified under, according to the Registraire des entreprises
 #' @param active a dummy variable equal to 1 if a company exists currently
@@ -36,8 +34,8 @@ req_date_creation <- base::unique(req_data$DAT_INIT_NOM_ASSUJ)
 #'
 #' @return All corresponding businesses in Quebec
 #' @export
-#' @import dplyr lubridate
-#'
+#' @import dplyr
+#' @import lubridate
 #' @examples Req_data()
 Req_data <- function(industry = req_industry,
                      active = req_active,
@@ -70,9 +68,9 @@ Req_data <- function(industry = req_industry,
 #'
 #' @return The corresponding industry code
 #' @export
-#' @import
+#' @import dplyr
 #'
-#' @examples Req_industry(industry="Boulangeries et pâtisseries)
+#' @examples Req_industry(industry="Boulangeries et pâtisseries")
 Req_industry <- function(industry) {
   req_industry_natural_language <- req_data %>% select("COD_ACT_ECON_CAE", "VAL_DOM_FRAN") %>% unique() %>% arrange(VAL_DOM_FRAN)
   if (missing(industry)) {
@@ -90,7 +88,7 @@ Req_industry <- function(industry) {
 #'
 #' @return table displaying the ranges of employees in businesses and the corresponding codes
 #' @export
-#' @import
+#' @import dplyr
 #'
 #' @examples Req_employee()
 Req_employee <- function() {

@@ -1,2 +1,13 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.travis\.yml$
+^appveyor\.yml$
+^codecov\.yml$
+^cran-comments\.Rmd$
+^CRAN-RELEASE$
+^cran-comments\.md$
+^LICENSE\.md$

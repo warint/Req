@@ -25,7 +25,6 @@ All corresponding businesses in Quebec
 }
 \description{
 This function takes the data inputs of industry, an active dummy , the number of employees, and the creation date and returns the corresponding businesses
-
 If any/all inputs are left blank, all possible observations are called
 }
 \examples{
