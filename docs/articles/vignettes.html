@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,23 +33,17 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Req</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -69,7 +65,7 @@
 
       
 
-      </header><script src="vignettes_files/header-attrs-2.11.2/header-attrs.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>vignettes</h1>
@@ -82,25 +78,31 @@
 
     
     
-<p>Req’s objective is to paint a comprehensive and historical picture of the Québec economy. The package provides insight into past and current trends</p>
-<p>of the businesses created in Quebec by constructing a geographical representation of where and when each business exists (or existed),</p>
-<p>as well as details about the business (i.e., what industry the business is in, how many employees it has, etc.)</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the latest development version of ‘Req’ with remotes as follows:</p>
+<p>Req’s objective is to paint a comprehensive and historical picture of
+the Québec economy. The package provides insight into past and current
+trends</p>
+<p>of the businesses created in Quebec by constructing a geographical
+representation of where and when each business exists (or existed),</p>
+<p>as well as details about the business (i.e., what industry the
+business is in, how many employees it has, etc.)</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the latest development version of ‘Req’ with remotes
+as follows:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"warint/Req"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"warint/Req"</span><span class="op">)</span></code></pre></div>
 <p>Then, test your installation with:</p>
 </div>
-<div id="how-to" class="section level2">
-<h2 class="hasAnchor">
-<a href="#how-to" class="anchor"></a>How-To</h2>
-<div id="step-1-getting-the-businesss-industry-code" class="section level3">
-<h3 class="hasAnchor">
-<a href="#step-1-getting-the-businesss-industry-code" class="anchor"></a>Step 1: Getting the business’s industry code</h3>
-<p>A user needs to first know the corresponding industry code of a certain business</p>
+<div class="section level2">
+<h2 id="how-to">How-To<a class="anchor" aria-label="anchor" href="#how-to"></a>
+</h2>
+<div class="section level3">
+<h3 id="step-1-getting-the-businesss-industry-code">Step 1: Getting the business’s industry code<a class="anchor" aria-label="anchor" href="#step-1-getting-the-businesss-industry-code"></a>
+</h3>
+<p>A user needs to first know the corresponding industry code of a
+certain business</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/Req_industry.html">Req_industry</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all industries and their respective codes (from the Registraire des Entrprises) will be produced</span>
 
@@ -110,21 +112,29 @@
 
 <span class="fu"><a href="../reference/Req_industry.html">Req_industry</a></span><span class="op">(</span><span class="st">"Boula"</span><span class="op">)</span> <span class="co"># A list of all businesses in an industry that contains the string "Boula" and their respective codes (from the Registraire des Entrprises) will be produced</span></code></pre></div>
 </div>
-<div id="step-2-getting-the-businesss-number-of-employees-code" class="section level3">
-<h3 class="hasAnchor">
-<a href="#step-2-getting-the-businesss-number-of-employees-code" class="anchor"></a>Step 2: Getting the business’s number of employees code</h3>
-<p>Next, a user needs to know the possible ranges of the number of employees and their corresponding codes</p>
+<div class="section level3">
+<h3 id="step-2-getting-the-businesss-number-of-employees-code">Step 2: Getting the business’s number of employees code<a class="anchor" aria-label="anchor" href="#step-2-getting-the-businesss-number-of-employees-code"></a>
+</h3>
+<p>Next, a user needs to know the possible ranges of the number of
+employees and their corresponding codes</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/Req_employee.html">Req_employee</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># A list of all possible ranges of number of employees and their respective codes (from the Registraire des Entrprises) will be produced</span></code></pre></div>
 </div>
-<div id="step-3-getting-the-data" class="section level3">
-<h3 class="hasAnchor">
-<a href="#step-3-getting-the-data" class="anchor"></a>Step 3: Getting the data</h3>
-<p>Once the user knows all the arguments, s.he can collect the data in a very easy way through this function:</p>
+<div class="section level3">
+<h3 id="step-3-getting-the-data">Step 3: Getting the data<a class="anchor" aria-label="anchor" href="#step-3-getting-the-data"></a>
+</h3>
+<p>Once the user knows all the arguments, s.he can collect the data in a
+very easy way through this function:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/Req_data.html">Req_data</a></span><span class="op">(</span>industry <span class="op">=</span> <span class="fl">6013</span>  , active <span class="op">=</span> <span class="fl">1</span>, num_employee <span class="op">=</span> <span class="st">"B"</span>, creation_date <span class="op">=</span> <span class="st">"2000-01-01"</span> <span class="op">)</span>  <span class="co"># It generates a dataframe with all companies operating in the industry 6013 (Bakeries and pastry shops), which are active, have a number of employees B (between 6 and 10) and were created on or after 2020-01-01.</span>
 <span class="fu"><a href="../reference/Req_data.html">Req_data</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># It generates a data frame of the complete dataset</span></code></pre></div>
 </div>
+</div>
+<div class="section level2">
+<h2 id="documentation-about-req-data">Documentation about Req data<a class="anchor" aria-label="anchor" href="#documentation-about-req-data"></a>
+</h2>
+<p>You can find <a href="guideutilisation.pdf" target="_blank">here</a>
+the documentation (in french) explaining the Req data.</p>
 </div>
   </div>
 
@@ -139,11 +149,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Thierry Warin.</p>
+  <p></p>
+<p>Developed by Thierry Warin.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
@@ -151,6 +163,8 @@
 
   
 
+
+  
 
   </body>
 </html>
